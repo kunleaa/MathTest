@@ -37,9 +37,13 @@ public class Utils {
     public static void speak(String content) {
         // Windows: 使用PowerShell的语音合成功能
         String command = String.format(
-                "Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('%s');",
-                content
+                "Add-Type -AssemblyName System.Speech; " +
+                        "$speech = New-Object System.Speech.Synthesis.SpeechSynthesizer; " +
+                        "$speech.Rate = %d; " +  // 添加语速控制
+                        "$speech.Speak('%s');",
+                -3, content
         );
+
         try {
             Process process = Runtime.getRuntime().exec(new String[]{"PowerShell", "-Command", command});
         } catch (IOException e) {
