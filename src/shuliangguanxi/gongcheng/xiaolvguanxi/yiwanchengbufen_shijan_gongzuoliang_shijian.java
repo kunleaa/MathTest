@@ -1,6 +1,6 @@
 package shuliangguanxi.gongcheng.xiaolvguanxi;
 
-import common.utils;
+import common.Utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,7 +33,7 @@ public class yiwanchengbufen_shijan_gongzuoliang_shijian {
                 int tSingle = gross/2 - preGross;
 
                 // 出题
-                int[] factors = utils.findFactors(gross);
+                int[] factors = Utils.findFactors(gross);
                 // 几台抽水机
                 int eP = factors[new Random().nextInt(1, factors.length)];
                 //抽几个小时

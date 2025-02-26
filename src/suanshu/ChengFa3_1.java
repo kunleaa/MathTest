@@ -1,5 +1,7 @@
 package suanshu;
 
+import common.Utils;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
@@ -19,6 +21,9 @@ import java.util.Random;
  * 从第一位开始依次按位往后计算，后一位的进位加到当前位
  */
 public class ChengFa3_1 {
+    static boolean isLook = false;
+    static boolean isListen = true;
+
     public static void main(String[] args) {
         while (true) {
             try {
@@ -26,7 +31,15 @@ public class ChengFa3_1 {
                 double random1 = new Random().nextInt(100, 1000);
                 double random2 = new Random().nextInt(6, 10);
 
-                System.out.printf("%s * %s%n", random1, random2);
+                if (isLook) {
+                    System.out.printf("%s * %s%n", random1, random2);
+                }
+                if (isListen) {
+                    System.out.printf("请作答%n");
+                    String speakContent = String.format("%s 乘以 %s", random1, random2);
+                    Utils.speak(speakContent);
+                }
+
                 BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
                 String text = reader.readLine();
                 double intput = Double.parseDouble(text);

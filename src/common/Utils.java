@@ -1,9 +1,10 @@
 package common;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class utils {
+public class Utils {
 
     // 最大公约数
     public static int gcd(int a, int b) {
@@ -31,5 +32,18 @@ public class utils {
     // 转为最接近自己的偶数，3-》2，1-》0,5-》4
     public static int toEven(int a) {
         return (a/2)*2;
+    }
+
+    public static void speak(String content) {
+        // Windows: 使用PowerShell的语音合成功能
+        String command = String.format(
+                "Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('%s');",
+                content
+        );
+        try {
+            Process process = Runtime.getRuntime().exec(new String[]{"PowerShell", "-Command", command});
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

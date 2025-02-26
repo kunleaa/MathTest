@@ -1,6 +1,6 @@
 package shuliangguanxi.gongcheng.xiaolvguanxi;
 
-import common.utils;
+import common.Utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,10 +32,10 @@ public class duoduixiang_xiaolvguanxi_shijian_shijian {
                 int answer = g/ea;
 
                 // 乙和甲、丙的公约数
-                int gcdac = utils.gcd(eb, (ea + ec));
+                int gcdac = Utils.gcd(eb, (ea + ec));
 
                 // 丙和甲、乙的公约数
-                int gcdab = utils.gcd(ec, (ea + eb));
+                int gcdab = Utils.gcd(ec, (ea + eb));
 
                 System.out.printf("三个施工队，乙工效为甲、丙的%s/%s，丙工效为甲、乙的%s/%s，三队合作%s天完成总工程。如果由甲单独做，需要多少天？\n",
                         (eb/gcdac), ((ea + ec)/gcdac),(ec/gcdab),((ea + eb)/gcdab), n);

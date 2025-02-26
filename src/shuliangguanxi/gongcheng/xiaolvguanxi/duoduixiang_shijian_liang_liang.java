@@ -1,6 +1,6 @@
 package shuliangguanxi.gongcheng.xiaolvguanxi;
 
-import common.utils;
+import common.Utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -37,10 +37,10 @@ public class duoduixiang_shijian_liang_liang {
                 int answer = ea*2*tavg;
 
                 // 第一阶段完成了的占比
-                int gcd1 = utils.gcd(gross1,grossa);
+                int gcd1 = Utils.gcd(gross1,grossa);
 
                 // 第二阶段，完成量/剩余全部工作量
-                int gcd2 = utils.gcd(gross2,grossa - gross1);
+                int gcd2 = Utils.gcd(gross2,grossa - gross1);
 
                 System.out.printf("甲乙丙合作完成任务，甲、丙合作%s天，完成全部任务的%s/%s；接着乙、丙合作%s天，完成剩下任务的%s/%s；最后甲、乙合作%s天，恰好完成剩余任务。问甲完成部分占全部任务的多少？\n",
                         tavg,gross1/gcd1, grossa/gcd1,

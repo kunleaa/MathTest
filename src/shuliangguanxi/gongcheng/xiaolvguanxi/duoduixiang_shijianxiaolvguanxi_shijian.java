@@ -1,6 +1,6 @@
 package shuliangguanxi.gongcheng.xiaolvguanxi;
 
-import common.utils;
+import common.Utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -36,10 +36,10 @@ public class duoduixiang_shijianxiaolvguanxi_shijian {
                 double answer = 1.0 * g/(ea + eb + ec);
 
                 // 乙和甲、丙的公约数
-                int gcd_achange = utils.gcd(echange, ea);
+                int gcd_achange = Utils.gcd(echange, ea);
 
                 // 丙和甲、乙的公约数
-                int gcd_bchange = utils.gcd(echange, eb);
+                int gcd_bchange = Utils.gcd(echange, eb);
 
                 System.out.printf("三个施工队，甲乙为一组，丙为一组，分别完成订单。甲、乙合作耗时比丙少%d天，如果将甲的%s/%s资源或者乙的%s/%s资源分给丙，则两组同时完成。问三队合作几天能完成订单？\n",
                         n, echange/gcd_achange, ea/gcd_achange,echange/gcd_bchange,eb/gcd_bchange);
