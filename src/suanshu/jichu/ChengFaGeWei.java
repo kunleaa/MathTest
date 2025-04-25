@@ -12,8 +12,8 @@ public class ChengFaGeWei {
         while (true) {
             try {
                 long cost = System.currentTimeMillis();
-                int random1 = new Random().nextInt(6, 10);
-                int random2 = new Random().nextInt(6, 10);
+                int random1 = new Random().nextInt(6, 9);
+                int random2 = new Random().nextInt(6, 9);
 
                 if (random1*random2 < 10) {
                     continue;

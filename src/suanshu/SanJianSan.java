@@ -8,6 +8,7 @@ import java.util.Random;
 
 /**
  * 计算进位之后的余数，例如8+8 得 6
+ * 听力心算，第一步：心中清晰的写出数字，两个数写两行。第二步：从到到尾逐个作差
  */
 public class SanJianSan {
 

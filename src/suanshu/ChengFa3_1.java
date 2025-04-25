@@ -21,8 +21,8 @@ import java.util.Random;
  * 从第一位开始依次按位往后计算，后一位的进位加到当前位
  */
 public class ChengFa3_1 {
-    static boolean isLook = false;
-    static boolean isListen = true;
+    static boolean isLook = true;
+    static boolean isListen = false;
 
     public static void main(String[] args) {
         while (true) {
