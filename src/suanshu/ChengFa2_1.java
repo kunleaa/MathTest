@@ -19,8 +19,8 @@ public class ChengFa2_1 {
         while (true) {
             try {
                 long cost = System.currentTimeMillis();
-                int random1 = new Random().nextInt(51, 100);
-                int random2 = new Random().nextInt(6, 10);
+                int random1 = new Random().nextInt(71, 100);
+                int random2 = new Random().nextInt(9, 10);
 
                 if (isLook) {
                     System.out.printf("%s + %s%n", random1, random2);

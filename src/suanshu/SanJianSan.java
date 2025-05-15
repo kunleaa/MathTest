@@ -19,7 +19,7 @@ public class SanJianSan {
         while (true) {
             try {
                 long cost = System.currentTimeMillis();
-                int random1 = new Random().nextInt(100, 999);
+                int random1 = new Random().nextInt(500, 999);
                 int random2 = new Random().nextInt(100, random1+1);
 
                 if (isLook) {
